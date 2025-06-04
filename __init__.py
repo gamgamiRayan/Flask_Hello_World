@@ -61,6 +61,10 @@ def valeur_maximale(valeurs):
         return f"<h2>La valeur maximale saisie est : {max_val}</h2>"
     except ValueError:
         return "<h3>Erreur : Veuillez entrer uniquement des nombres entiers dans l’URL.</h3>"
+
+@app.route('/cv')
+def afficher_cv():
+    return render_template('cv.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
