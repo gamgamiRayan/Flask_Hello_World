@@ -45,6 +45,22 @@ def somme_toutes_valeurs(valeurs):
         return f"<h2>La somme de toutes les valeurs est : {total}</h2>"
     except ValueError:
         return "<h3>Erreur : Veuillez entrer uniquement des nombres entiers dans l’URL.</h3>"
+
+@app.route('/max_val/<path:valeurs>')
+def valeur_maximale(valeurs):
+    try:
+        # Récupération des valeurs sous forme de liste de chaînes
+        liste_str = valeurs.split('/')
+        # Conversion en entiers
+        liste_int = [int(val) for val in liste_str]
+        # Recherche de la valeur maximale avec une boucle
+        max_val = liste_int[0]
+        for val in liste_int:
+            if val > max_val:
+                max_val = val
+        return f"<h2>La valeur maximale saisie est : {max_val}</h2>"
+    except ValueError:
+        return "<h3>Erreur : Veuillez entrer uniquement des nombres entiers dans l’URL.</h3>"
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
