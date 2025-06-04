@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CV de Rayan Gamgami</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="cv-container">
+        <header>
+            <img src="{{ url_for('static', filename='photo.jpg') }}" alt="Photo de Rayan Gamgami" class="photo">
+            <h1>Rayan Gamgami</h1>
+            <h2>Ingénieur Informatique - Développeur</h2>
+            <p>Né le 21 septembre 2003. Passionné par le développement web, l'IA et la création de solutions logicielles innovantes. Esprit analytique et goût du travail bien fait.</p>
+        </header>
+
+        <section>
+            <h3>Expériences professionnelles</h3>
+            <ul>
+                <li>2024 - présent : Développeur Full Stack chez DevSoft Solutions (Python, React, PostgreSQL)</li>
+                <li>2023 (stage) : Assistant développeur chez TechStart (API REST, HTML/CSS/JS)</li>
+                <li>2022 (freelance) : Création de sites vitrine pour petites entreprises locales</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Formations</h3>
+            <ul>
+                <li>2021 - 2024 : Diplôme d’ingénieur informatique – École Supérieure d’Informatique</li>
+                <li>2020 : Bac S – Spécialité Mathématiques – Mention Bien</li>
+                <li>Certifications : Python (OpenClassrooms), Git & GitHub (Udemy)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Compétences</h3>
+            <ul>
+                <li>Langages : Python, JavaScript, HTML, CSS, SQL</li>
+                <li>Frameworks : Flask, Django, React, Node.js</li>
+                <li>Outils : Git, Docker, VS Code, Figma</li>
+                <li>Qualités : rigueur, autonomie, curiosité technologique, bon relationnel</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
