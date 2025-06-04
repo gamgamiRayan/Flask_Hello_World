@@ -32,6 +32,19 @@ def somme_et_parite(valeur1, valeur2):
     
     return f"<h2>La somme des deux valeurs est : {resultat}</h2>" \
            f"<h3>Cette somme est un nombre {parite}.</h3>"
+
+@app.route('/somme_tout/<path:valeurs>')
+def somme_toutes_valeurs(valeurs):
+    try:
+        # Récupération des valeurs sous forme de liste de chaînes
+        liste_str = valeurs.split('/')
+        # Conversion en entiers
+        liste_int = [int(val) for val in liste_str]
+        # Calcul de la somme
+        total = sum(liste_int)
+        return f"<h2>La somme de toutes les valeurs est : {total}</h2>"
+    except ValueError:
+        return "<h3>Erreur : Veuillez entrer uniquement des nombres entiers dans l’URL.</h3>"
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
